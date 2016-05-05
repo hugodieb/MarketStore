@@ -131,6 +131,15 @@
   <ItemGroup>
     <None Include="icons\18-icone-twitter.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\photoshop-background-54519.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\wallpaper-comprao-bonanza-1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

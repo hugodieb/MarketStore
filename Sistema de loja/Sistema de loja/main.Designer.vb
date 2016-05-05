@@ -29,11 +29,23 @@ Partial Class main
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.pnIndex = New System.Windows.Forms.Panel()
+        Me.tbcIndex = New System.Windows.Forms.TabControl()
+        Me.tbAlterar = New System.Windows.Forms.TabPage()
+        Me.tbFormVendas = New System.Windows.Forms.TabPage()
+        Me.tbFecharCx = New System.Windows.Forms.TabPage()
+        Me.tbQuitarCx = New System.Windows.Forms.TabPage()
+        Me.tbConsultas = New System.Windows.Forms.TabPage()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.tbCadastro = New System.Windows.Forms.TabPage()
         Me.Panel1.SuspendLayout()
         CType(Me.linktwitter, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.linkinstagram, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.linkface, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tbcIndex.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -45,10 +57,10 @@ Partial Class main
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(0, 488)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(722, 31)
+        Me.Panel1.Size = New System.Drawing.Size(920, 31)
         Me.Panel1.TabIndex = 0
         '
         'linktwitter
@@ -125,6 +137,124 @@ Partial Class main
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Sistema de Controle e Gestão Administrativo"
         '
+        'pnIndex
+        '
+        Me.pnIndex.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.pnIndex.BackgroundImage = Global.Sistema_de_loja.My.Resources.Resources.photoshop_background_54519
+        Me.pnIndex.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pnIndex.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pnIndex.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnIndex.Location = New System.Drawing.Point(0, 0)
+        Me.pnIndex.Name = "pnIndex"
+        Me.pnIndex.Size = New System.Drawing.Size(920, 45)
+        Me.pnIndex.TabIndex = 1
+        '
+        'tbcIndex
+        '
+        Me.tbcIndex.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
+        Me.tbcIndex.Appearance = System.Windows.Forms.TabAppearance.FlatButtons
+        Me.tbcIndex.Controls.Add(Me.tbCadastro)
+        Me.tbcIndex.Controls.Add(Me.tbAlterar)
+        Me.tbcIndex.Controls.Add(Me.tbFormVendas)
+        Me.tbcIndex.Controls.Add(Me.tbFecharCx)
+        Me.tbcIndex.Controls.Add(Me.tbQuitarCx)
+        Me.tbcIndex.Controls.Add(Me.tbConsultas)
+        Me.tbcIndex.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tbcIndex.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbcIndex.Location = New System.Drawing.Point(0, 0)
+        Me.tbcIndex.Name = "tbcIndex"
+        Me.tbcIndex.SelectedIndex = 0
+        Me.tbcIndex.Size = New System.Drawing.Size(920, 122)
+        Me.tbcIndex.TabIndex = 0
+        '
+        'tbAlterar
+        '
+        Me.tbAlterar.BackColor = System.Drawing.Color.SkyBlue
+        Me.tbAlterar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.tbAlterar.ForeColor = System.Drawing.Color.LightSkyBlue
+        Me.tbAlterar.Location = New System.Drawing.Point(4, 27)
+        Me.tbAlterar.Name = "tbAlterar"
+        Me.tbAlterar.Padding = New System.Windows.Forms.Padding(3)
+        Me.tbAlterar.Size = New System.Drawing.Size(912, 91)
+        Me.tbAlterar.TabIndex = 1
+        Me.tbAlterar.Text = "Alterar excluir cadastro"
+        '
+        'tbFormVendas
+        '
+        Me.tbFormVendas.BackColor = System.Drawing.Color.SkyBlue
+        Me.tbFormVendas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.tbFormVendas.ForeColor = System.Drawing.Color.LightSkyBlue
+        Me.tbFormVendas.Location = New System.Drawing.Point(4, 27)
+        Me.tbFormVendas.Name = "tbFormVendas"
+        Me.tbFormVendas.Size = New System.Drawing.Size(912, 91)
+        Me.tbFormVendas.TabIndex = 2
+        Me.tbFormVendas.Text = "Formulário de Vendas"
+        '
+        'tbFecharCx
+        '
+        Me.tbFecharCx.BackColor = System.Drawing.Color.SkyBlue
+        Me.tbFecharCx.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.tbFecharCx.ForeColor = System.Drawing.Color.LightSkyBlue
+        Me.tbFecharCx.Location = New System.Drawing.Point(4, 27)
+        Me.tbFecharCx.Name = "tbFecharCx"
+        Me.tbFecharCx.Size = New System.Drawing.Size(912, 91)
+        Me.tbFecharCx.TabIndex = 3
+        Me.tbFecharCx.Text = "Fechamento do caixa"
+        '
+        'tbQuitarCx
+        '
+        Me.tbQuitarCx.BackColor = System.Drawing.Color.SkyBlue
+        Me.tbQuitarCx.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.tbQuitarCx.ForeColor = System.Drawing.Color.LightSkyBlue
+        Me.tbQuitarCx.Location = New System.Drawing.Point(4, 27)
+        Me.tbQuitarCx.Name = "tbQuitarCx"
+        Me.tbQuitarCx.Size = New System.Drawing.Size(912, 91)
+        Me.tbQuitarCx.TabIndex = 4
+        Me.tbQuitarCx.Text = "Quitar débitos"
+        '
+        'tbConsultas
+        '
+        Me.tbConsultas.BackColor = System.Drawing.Color.SkyBlue
+        Me.tbConsultas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.tbConsultas.ForeColor = System.Drawing.Color.LightSkyBlue
+        Me.tbConsultas.Location = New System.Drawing.Point(4, 27)
+        Me.tbConsultas.Name = "tbConsultas"
+        Me.tbConsultas.Size = New System.Drawing.Size(912, 91)
+        Me.tbConsultas.TabIndex = 5
+        Me.tbConsultas.Text = "Consultas"
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.tbcIndex)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 45)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(920, 122)
+        Me.Panel2.TabIndex = 2
+        '
+        'Panel3
+        '
+        Me.Panel3.BackgroundImage = Global.Sistema_de_loja.My.Resources.Resources.wallpaper_comprao_bonanza_1
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel3.Location = New System.Drawing.Point(0, 167)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(920, 321)
+        Me.Panel3.TabIndex = 3
+        '
+        'tbCadastro
+        '
+        Me.tbCadastro.BackColor = System.Drawing.Color.SkyBlue
+        Me.tbCadastro.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.tbCadastro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbCadastro.ForeColor = System.Drawing.Color.LightSkyBlue
+        Me.tbCadastro.Location = New System.Drawing.Point(4, 27)
+        Me.tbCadastro.Name = "tbCadastro"
+        Me.tbCadastro.Padding = New System.Windows.Forms.Padding(3)
+        Me.tbCadastro.Size = New System.Drawing.Size(912, 91)
+        Me.tbCadastro.TabIndex = 0
+        Me.tbCadastro.Text = "Cadastro"
+        '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -132,7 +262,10 @@ Partial Class main
         Me.AutoSize = True
         Me.BackgroundImage = Global.Sistema_de_loja.My.Resources.Resources.apple
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(722, 450)
+        Me.ClientSize = New System.Drawing.Size(920, 519)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.pnIndex)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
@@ -146,6 +279,8 @@ Partial Class main
         CType(Me.linkinstagram, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.linkface, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tbcIndex.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -156,5 +291,15 @@ Partial Class main
     Friend WithEvents linkinstagram As System.Windows.Forms.PictureBox
     Friend WithEvents linkface As System.Windows.Forms.PictureBox
     Friend WithEvents linktwitter As System.Windows.Forms.PictureBox
+    Friend WithEvents pnIndex As System.Windows.Forms.Panel
+    Friend WithEvents tbcIndex As System.Windows.Forms.TabControl
+    Friend WithEvents tbAlterar As System.Windows.Forms.TabPage
+    Friend WithEvents tbFormVendas As System.Windows.Forms.TabPage
+    Friend WithEvents tbFecharCx As System.Windows.Forms.TabPage
+    Friend WithEvents tbQuitarCx As System.Windows.Forms.TabPage
+    Friend WithEvents tbConsultas As System.Windows.Forms.TabPage
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents tbCadastro As System.Windows.Forms.TabPage
 
 End Class

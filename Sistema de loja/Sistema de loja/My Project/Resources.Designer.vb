@@ -83,6 +83,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property background() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("background", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property c3adcone_instagram() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("c3adcone-instagram", resourceCulture)
@@ -106,6 +116,26 @@ Namespace My.Resources
         Friend ReadOnly Property icon175x175() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("icon175x175", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property photoshop_background_54519() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("photoshop-background-54519", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property wallpaper_comprao_bonanza_1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("wallpaper-comprao-bonanza-1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

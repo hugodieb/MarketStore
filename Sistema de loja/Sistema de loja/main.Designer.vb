@@ -57,7 +57,7 @@ Partial Class main
         Me.linktwitter.BackColor = System.Drawing.Color.Gainsboro
         Me.linktwitter.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.linktwitter.Image = Global.Sistema_de_loja.My.Resources.Resources._18_icone_twitter
-        Me.linktwitter.Location = New System.Drawing.Point(431, 3)
+        Me.linktwitter.Location = New System.Drawing.Point(437, 3)
         Me.linktwitter.Name = "linktwitter"
         Me.linktwitter.Size = New System.Drawing.Size(28, 25)
         Me.linktwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -70,7 +70,7 @@ Partial Class main
         Me.linkinstagram.BackColor = System.Drawing.Color.Gainsboro
         Me.linkinstagram.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.linkinstagram.Image = Global.Sistema_de_loja.My.Resources.Resources.c3adcone_instagram
-        Me.linkinstagram.Location = New System.Drawing.Point(405, 3)
+        Me.linkinstagram.Location = New System.Drawing.Point(408, 3)
         Me.linkinstagram.Name = "linkinstagram"
         Me.linkinstagram.Size = New System.Drawing.Size(28, 25)
         Me.linkinstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage

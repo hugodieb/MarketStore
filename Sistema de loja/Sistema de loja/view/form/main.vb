@@ -2,6 +2,7 @@
 Public Class main
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        loadHeaderMain()
 
     End Sub
 
@@ -16,4 +17,5 @@ Public Class main
     Private Sub linktwitter_Click(sender As Object, e As EventArgs) Handles linktwitter.Click
         System.Diagnostics.Process.Start("https://twitter.com/corinthians?lang=pt")
     End Sub
+
 End Class

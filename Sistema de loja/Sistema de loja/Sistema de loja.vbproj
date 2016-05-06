@@ -70,10 +70,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="main.vb">
+    <Compile Include="model\User.vb" />
+    <Compile Include="view\form\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="view\form\frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="main.Designer.vb">
+    <Compile Include="view\control\header.Designer.vb">
+      <DependentUpon>header.vb</DependentUpon>
+    </Compile>
+    <Compile Include="view\control\header.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\module\loadHeader.vb" />
+    <Compile Include="view\form\main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\form\main.Designer.vb">
       <DependentUpon>main.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -92,9 +106,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="view\control\tabPrincipal.Designer.vb">
+      <DependentUpon>tabPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="view\control\tabPrincipal.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="main.resx">
+    <EmbeddedResource Include="view\form\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\control\header.resx">
+      <DependentUpon>header.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\form\main.resx">
       <DependentUpon>main.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -102,6 +128,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\control\tabPrincipal.resx">
+      <DependentUpon>tabPrincipal.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +168,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\wallpaper-comprao-bonanza-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="control\" />
+    <Folder Include="DAO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\cbef081d709fe61c46eb7a0831a1ac2a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\user_login-icon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\11770210397171.560e44299bd2a.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

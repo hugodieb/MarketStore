@@ -85,6 +85,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="control\loginCntrol.vb" />
+    <Compile Include="DAO\mdAcessoBD.vb" />
+    <Compile Include="DAO\userDAO.vb" />
     <Compile Include="model\User.vb" />
     <Compile Include="view\form\frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
@@ -184,10 +187,7 @@
   <ItemGroup>
     <None Include="icons\wallpaper-comprao-bonanza-1.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="control\" />
-    <Folder Include="DAO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="icons\Login-icon.png" />
   </ItemGroup>

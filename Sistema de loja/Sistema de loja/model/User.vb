@@ -1,31 +1,35 @@
 ﻿Public Class User
 
+    Private Id As Integer
     Private name As String
     Private password As String
-    Private typeUser As String
+    Private perfil As String
 
-    Public Sub setName(ByRef name As String)
-        Me.name = name
-    End Sub
+    Public Property nameUser() As String
+        Get
+            Return name
+        End Get
+        Set(value As String)
+            name = value
+        End Set
+    End Property
 
-    Public Function getName()
-        Return Me.name
-    End Function
+    Public Property passwordUser() As String
+        Get
+            Return password
+        End Get
+        Set(value As String)
+            password = value
+        End Set
+    End Property
 
-    Public Sub setPassword(ByRef password As String)
-        Me.password = password
-    End Sub
-
-    Public Function getPassword()
-        Return Me.password
-    End Function
-
-    Public Sub setTypeUser(ByRef type As String)
-        Me.typeUser = type
-    End Sub
-
-    Public Function getTypeUser()
-        Return Me.typeUser
-    End Function
+    Public Property typeUser() As String
+        Get
+            Return perfil
+        End Get
+        Set(value As String)
+            perfil = value
+        End Set
+    End Property
 
 End Class

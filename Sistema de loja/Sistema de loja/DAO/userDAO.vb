@@ -3,12 +3,15 @@ Imports Sistema_de_loja.User
 
 Public Class userDAO
 
-    Public Sub login(ByVal user As User)
-        Dim sql As String = Nothing
-        Dim cmd As SqlCommand = Nothing
-        Dim dr As SqlDataReader = Nothing
+    Dim sql As String = Nothing
+    Dim cmd As SqlCommand = Nothing
+    Dim dr As SqlDataReader = Nothing
+    Public statusLogUser As Boolean
 
+    Public Sub login(ByVal user As User)
+       
         Using con As SqlConnection = getConnection()
+
             Try
                 con.Open()
 
@@ -20,7 +23,13 @@ Public Class userDAO
                 dr = cmd.ExecuteReader
 
                 If dr.HasRows Then
-                    MsgBox("Estou conectado", MsgBoxStyle.Information)
+                    dr.Read()
+                    Dim strPerfil As String
+                    strPerfil = dr.Item("typeUser")
+                    statusLogUser = True
+
+                    loadingpanel2(strPerfil)
+                    frmLogin.Dispose()
 
                 Else
                     MsgBox("Usuário não encontrado na base de dados.", MsgBoxStyle.Information)
@@ -33,6 +42,11 @@ Public Class userDAO
                 con.Close()
             End Try
         End Using
+    End Sub
+
+    Public Sub logout()
+
+        loadHeaderMain(0)
     End Sub
 
 End Class

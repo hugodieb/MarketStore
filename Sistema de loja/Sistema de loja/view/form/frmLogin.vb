@@ -3,7 +3,7 @@
 Public Class frmLogin
 
     Dim control As loginCntrol
-    Dim user_ As User
+    Public user_ As User
     Dim isValid As Boolean = False
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click

@@ -2,8 +2,8 @@
 Public Class main
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        loadHeaderMain()
-
+        Dim index As Integer = 0
+        loadHeaderMain(index)
     End Sub
 
     Private Sub linkface_Click(sender As Object, e As EventArgs) Handles linkface.Click

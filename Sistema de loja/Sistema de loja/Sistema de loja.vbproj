@@ -124,10 +124,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="view\control\tabPrincipal.Designer.vb">
-      <DependentUpon>tabPrincipal.vb</DependentUpon>
+    <Compile Include="view\control\tabMain.Designer.vb">
+      <DependentUpon>tabMain.vb</DependentUpon>
     </Compile>
-    <Compile Include="view\control\tabPrincipal.vb">
+    <Compile Include="view\control\tabMain.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
@@ -147,8 +147,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\control\tabPrincipal.resx">
-      <DependentUpon>tabPrincipal.vb</DependentUpon>
+    <EmbeddedResource Include="view\control\tabMain.resx">
+      <DependentUpon>tabMain.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

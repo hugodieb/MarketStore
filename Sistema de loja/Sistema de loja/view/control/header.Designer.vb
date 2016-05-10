@@ -22,10 +22,13 @@ Partial Class header
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(header))
         Me.pnIndex = New System.Windows.Forms.Panel()
         Me.lblMarketCenter = New System.Windows.Forms.Label()
         Me.pictMarketCenter = New System.Windows.Forms.PictureBox()
         Me.pictLogin = New System.Windows.Forms.PictureBox()
+        Me.imgListHeaderLog = New System.Windows.Forms.ImageList(Me.components)
         Me.pnIndex.SuspendLayout()
         CType(Me.pictMarketCenter, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictLogin, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,7 +66,7 @@ Partial Class header
         'pictMarketCenter
         '
         Me.pictMarketCenter.BackColor = System.Drawing.Color.Transparent
-        Me.pictMarketCenter.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pictMarketCenter.Dock = System.Windows.Forms.DockStyle.Top
         Me.pictMarketCenter.Location = New System.Drawing.Point(0, 0)
         Me.pictMarketCenter.Name = "pictMarketCenter"
         Me.pictMarketCenter.Size = New System.Drawing.Size(664, 37)
@@ -73,17 +76,23 @@ Partial Class header
         'pictLogin
         '
         Me.pictLogin.BackColor = System.Drawing.Color.Transparent
-        Me.pictLogin.BackgroundImage = Global.Sistema_de_loja.My.Resources.Resources.Login_icon
         Me.pictLogin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.pictLogin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pictLogin.Dock = System.Windows.Forms.DockStyle.Right
-        Me.pictLogin.Image = Global.Sistema_de_loja.My.Resources.Resources.Login_icon1
+        Me.pictLogin.ImageLocation = ""
         Me.pictLogin.Location = New System.Drawing.Point(664, 0)
         Me.pictLogin.Name = "pictLogin"
         Me.pictLogin.Size = New System.Drawing.Size(54, 37)
         Me.pictLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pictLogin.TabIndex = 0
         Me.pictLogin.TabStop = False
+        '
+        'imgListHeaderLog
+        '
+        Me.imgListHeaderLog.ImageStream = CType(resources.GetObject("imgListHeaderLog.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.imgListHeaderLog.TransparentColor = System.Drawing.Color.Transparent
+        Me.imgListHeaderLog.Images.SetKeyName(0, "Login-icon.png")
+        Me.imgListHeaderLog.Images.SetKeyName(1, "logout.ico")
         '
         'header
         '
@@ -103,5 +112,6 @@ Partial Class header
     Friend WithEvents pictLogin As System.Windows.Forms.PictureBox
     Friend WithEvents lblMarketCenter As System.Windows.Forms.Label
     Friend WithEvents pictMarketCenter As System.Windows.Forms.PictureBox
+    Friend WithEvents imgListHeaderLog As System.Windows.Forms.ImageList
 
 End Class

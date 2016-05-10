@@ -30,8 +30,9 @@ Partial Class main
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TabPrincipal2 = New Sistema_de_loja.tabPrincipal()
-        Me.TabPrincipal1 = New Sistema_de_loja.tabPrincipal()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TabPrincipal2 = New Sistema_de_loja.tabMain()
+        Me.TabPrincipal1 = New Sistema_de_loja.tabMain()
         Me.Panel1.SuspendLayout()
         CType(Me.linktwitter, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.linkinstagram, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,6 +55,7 @@ Partial Class main
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(920, 31)
         Me.Panel1.TabIndex = 0
+        Me.Panel1.Tag = ""
         '
         'linktwitter
         '
@@ -133,6 +135,7 @@ Partial Class main
         '
         Me.Panel3.BackgroundImage = Global.Sistema_de_loja.My.Resources.Resources.wallpaper_comprao_bonanza_1
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel3.Controls.Add(Me.Panel2)
         Me.Panel3.Controls.Add(Me.TabPrincipal2)
         Me.Panel3.Controls.Add(Me.TabPrincipal1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
@@ -140,6 +143,16 @@ Partial Class main
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(920, 488)
         Me.Panel3.TabIndex = 3
+        '
+        'Panel2
+        '
+        Me.Panel2.AutoSize = True
+        Me.Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(916, 0)
+        Me.Panel2.TabIndex = 2
         '
         'TabPrincipal2
         '
@@ -194,7 +207,8 @@ Partial Class main
     Friend WithEvents linkface As System.Windows.Forms.PictureBox
     Friend WithEvents linktwitter As System.Windows.Forms.PictureBox
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents TabPrincipal1 As Sistema_de_loja.tabPrincipal
-    Friend WithEvents TabPrincipal2 As Sistema_de_loja.tabPrincipal
+    Friend WithEvents TabPrincipal1 As Sistema_de_loja.tabMain
+    Friend WithEvents TabPrincipal2 As Sistema_de_loja.tabMain
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
 
 End Class

@@ -11,7 +11,7 @@ Public Class header
     Public Sub verifyUserLogado()
         Dim userLog As New frmLogin
         Dim frm As New userDAO
-        Dim statusPerfil As Boolean = frm.statusLogUser
+        Dim statusPerfil As Boolean = status
 
         Select Case statusPerfil
             Case False

@@ -201,6 +201,8 @@
     <None Include="icons\11770210397171.560e44299bd2a.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="icons\lamp11.png" />
+    <None Include="icons\lamp22.png" />
     <Content Include="myStore.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

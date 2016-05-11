@@ -1,12 +1,12 @@
 ﻿Imports System.Data.SqlClient
 Imports Sistema_de_loja.User
+Imports Sistema_de_loja.main
 
 Public Class userDAO
 
     Dim sql As String = Nothing
     Dim cmd As SqlCommand = Nothing
     Dim dr As SqlDataReader = Nothing
-    Public statusLogUser As Boolean
 
     Public Sub login(ByVal user As User)
        
@@ -26,7 +26,7 @@ Public Class userDAO
                     dr.Read()
                     Dim strPerfil As String
                     strPerfil = dr.Item("typeUser")
-                    statusLogUser = True
+                    status = True
 
                     loadingpanel2(strPerfil)
                     frmLogin.Dispose()
@@ -45,8 +45,13 @@ Public Class userDAO
     End Sub
 
     Public Sub logout()
-
+        Dim tbm As New tabMain
+        Dim name As String
+        name = tbm.Name
+        main.Panel2.Controls.RemoveByKey(name)
+        status = False
         loadHeaderMain(0)
+        statusLampLoginLogout()
     End Sub
 
 End Class

@@ -24,15 +24,25 @@ Partial Class header
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(header))
+        Me.imgListHeaderLog = New System.Windows.Forms.ImageList(Me.components)
         Me.pnIndex = New System.Windows.Forms.Panel()
         Me.lblMarketCenter = New System.Windows.Forms.Label()
         Me.pictMarketCenter = New System.Windows.Forms.PictureBox()
         Me.pictLogin = New System.Windows.Forms.PictureBox()
-        Me.imgListHeaderLog = New System.Windows.Forms.ImageList(Me.components)
+        Me.picLamp = New System.Windows.Forms.PictureBox()
+        Me.imgListLamp = New System.Windows.Forms.ImageList(Me.components)
         Me.pnIndex.SuspendLayout()
         CType(Me.pictMarketCenter, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictLogin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picLamp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'imgListHeaderLog
+        '
+        Me.imgListHeaderLog.ImageStream = CType(resources.GetObject("imgListHeaderLog.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.imgListHeaderLog.TransparentColor = System.Drawing.Color.Transparent
+        Me.imgListHeaderLog.Images.SetKeyName(0, "Login-icon.png")
+        Me.imgListHeaderLog.Images.SetKeyName(1, "logout.ico")
         '
         'pnIndex
         '
@@ -40,6 +50,7 @@ Partial Class header
         Me.pnIndex.BackgroundImage = Global.Sistema_de_loja.My.Resources.Resources.photoshop_background_54519
         Me.pnIndex.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pnIndex.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pnIndex.Controls.Add(Me.picLamp)
         Me.pnIndex.Controls.Add(Me.lblMarketCenter)
         Me.pnIndex.Controls.Add(Me.pictMarketCenter)
         Me.pnIndex.Controls.Add(Me.pictLogin)
@@ -65,8 +76,9 @@ Partial Class header
         '
         'pictMarketCenter
         '
+        Me.pictMarketCenter.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pictMarketCenter.BackColor = System.Drawing.Color.Transparent
-        Me.pictMarketCenter.Dock = System.Windows.Forms.DockStyle.Top
         Me.pictMarketCenter.Location = New System.Drawing.Point(0, 0)
         Me.pictMarketCenter.Name = "pictMarketCenter"
         Me.pictMarketCenter.Size = New System.Drawing.Size(664, 37)
@@ -87,12 +99,22 @@ Partial Class header
         Me.pictLogin.TabIndex = 0
         Me.pictLogin.TabStop = False
         '
-        'imgListHeaderLog
+        'picLamp
         '
-        Me.imgListHeaderLog.ImageStream = CType(resources.GetObject("imgListHeaderLog.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.imgListHeaderLog.TransparentColor = System.Drawing.Color.Transparent
-        Me.imgListHeaderLog.Images.SetKeyName(0, "Login-icon.png")
-        Me.imgListHeaderLog.Images.SetKeyName(1, "logout.ico")
+        Me.picLamp.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.picLamp.BackColor = System.Drawing.Color.Transparent
+        Me.picLamp.Location = New System.Drawing.Point(628, 3)
+        Me.picLamp.Name = "picLamp"
+        Me.picLamp.Size = New System.Drawing.Size(30, 31)
+        Me.picLamp.TabIndex = 3
+        Me.picLamp.TabStop = False
+        '
+        'imgListLamp
+        '
+        Me.imgListLamp.ImageStream = CType(resources.GetObject("imgListLamp.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.imgListLamp.TransparentColor = System.Drawing.Color.Transparent
+        Me.imgListLamp.Images.SetKeyName(0, "lamp11.png")
+        Me.imgListLamp.Images.SetKeyName(1, "lamp22.png")
         '
         'header
         '
@@ -105,6 +127,7 @@ Partial Class header
         Me.pnIndex.PerformLayout()
         CType(Me.pictMarketCenter, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pictLogin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picLamp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -113,5 +136,7 @@ Partial Class header
     Friend WithEvents lblMarketCenter As System.Windows.Forms.Label
     Friend WithEvents pictMarketCenter As System.Windows.Forms.PictureBox
     Friend WithEvents imgListHeaderLog As System.Windows.Forms.ImageList
+    Friend WithEvents picLamp As System.Windows.Forms.PictureBox
+    Friend WithEvents imgListLamp As System.Windows.Forms.ImageList
 
 End Class

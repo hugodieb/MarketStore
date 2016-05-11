@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Module mdAcessoBD
-
+    Public status As Boolean
     Dim sql As String
 
     Public Function getConnection() As SqlConnection

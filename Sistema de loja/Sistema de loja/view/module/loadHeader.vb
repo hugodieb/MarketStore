@@ -1,4 +1,5 @@
 ﻿Imports Sistema_de_loja
+Imports Sistema_de_loja.main
 
 Module loadHeader
     Dim head As New header
@@ -9,6 +10,7 @@ Module loadHeader
         main.Panel2.Controls.Add(head)
         head.Dock = DockStyle.Top
         head.pictLogin.Image = head.imgListHeaderLog.Images(index)
+        statusLampLoginLogout()
         head.Show()
     End Sub
 
@@ -28,6 +30,18 @@ Module loadHeader
             Case "oper"
                 loadHeaderMain(1)
         End Select
+
+        statusLampLoginLogout()
+
     End Sub
 
+    Public Sub statusLampLoginLogout()
+        Dim loginLogout As String = status
+
+        If loginLogout Then
+            head.picLamp.Image = head.imgListLamp.Images(0)
+        Else
+            head.picLamp.Image = head.imgListLamp.Images(1)
+        End If
+    End Sub
 End Module

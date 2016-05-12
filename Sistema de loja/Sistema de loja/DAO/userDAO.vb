@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports Sistema_de_loja.User
 Imports Sistema_de_loja.main
+Imports System.Configuration
 
 Public Class userDAO
 
@@ -10,9 +11,10 @@ Public Class userDAO
 
     Public Sub login(ByVal user As User)
        
-        Using con As SqlConnection = getConnection()
+        Using con As New SqlConnection
 
             Try
+                con.ConnectionString = ConfigurationManager.AppSettings("ConnectionBD")
                 con.Open()
 
                 sql = "select * from person where ((name=@name) and (password=@password))"
@@ -48,7 +50,7 @@ Public Class userDAO
         Dim tbm As New tabMain
         Dim name As String
         name = tbm.Name
-        main.Panel2.Controls.RemoveByKey(name)
+        main.pnTop.Controls.RemoveByKey(name)
         status = False
         loadHeaderMain(0)
         statusLampLoginLogout()

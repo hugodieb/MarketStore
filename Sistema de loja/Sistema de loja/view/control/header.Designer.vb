@@ -26,15 +26,15 @@ Partial Class header
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(header))
         Me.imgListHeaderLog = New System.Windows.Forms.ImageList(Me.components)
         Me.pnIndex = New System.Windows.Forms.Panel()
+        Me.picLamp = New System.Windows.Forms.PictureBox()
         Me.lblMarketCenter = New System.Windows.Forms.Label()
         Me.pictMarketCenter = New System.Windows.Forms.PictureBox()
         Me.pictLogin = New System.Windows.Forms.PictureBox()
-        Me.picLamp = New System.Windows.Forms.PictureBox()
         Me.imgListLamp = New System.Windows.Forms.ImageList(Me.components)
         Me.pnIndex.SuspendLayout()
+        CType(Me.picLamp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictMarketCenter, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictLogin, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picLamp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'imgListHeaderLog
@@ -59,6 +59,16 @@ Partial Class header
         Me.pnIndex.Name = "pnIndex"
         Me.pnIndex.Size = New System.Drawing.Size(722, 41)
         Me.pnIndex.TabIndex = 2
+        '
+        'picLamp
+        '
+        Me.picLamp.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.picLamp.BackColor = System.Drawing.Color.Transparent
+        Me.picLamp.Location = New System.Drawing.Point(628, 3)
+        Me.picLamp.Name = "picLamp"
+        Me.picLamp.Size = New System.Drawing.Size(30, 31)
+        Me.picLamp.TabIndex = 3
+        Me.picLamp.TabStop = False
         '
         'lblMarketCenter
         '
@@ -99,16 +109,6 @@ Partial Class header
         Me.pictLogin.TabIndex = 0
         Me.pictLogin.TabStop = False
         '
-        'picLamp
-        '
-        Me.picLamp.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.picLamp.BackColor = System.Drawing.Color.Transparent
-        Me.picLamp.Location = New System.Drawing.Point(628, 3)
-        Me.picLamp.Name = "picLamp"
-        Me.picLamp.Size = New System.Drawing.Size(30, 31)
-        Me.picLamp.TabIndex = 3
-        Me.picLamp.TabStop = False
-        '
         'imgListLamp
         '
         Me.imgListLamp.ImageStream = CType(resources.GetObject("imgListLamp.ImageStream"), System.Windows.Forms.ImageListStreamer)
@@ -120,14 +120,15 @@ Partial Class header
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.Controls.Add(Me.pnIndex)
         Me.Name = "header"
         Me.Size = New System.Drawing.Size(722, 41)
         Me.pnIndex.ResumeLayout(False)
         Me.pnIndex.PerformLayout()
+        CType(Me.picLamp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pictMarketCenter, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pictLogin, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picLamp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

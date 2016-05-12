@@ -71,7 +71,7 @@ Partial Class tabMain
         Me.tbAlterar.Location = New System.Drawing.Point(4, 27)
         Me.tbAlterar.Name = "tbAlterar"
         Me.tbAlterar.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbAlterar.Size = New System.Drawing.Size(912, 91)
+        Me.tbAlterar.Size = New System.Drawing.Size(698, 56)
         Me.tbAlterar.TabIndex = 1
         Me.tbAlterar.Text = "Alterar excluir cadastro"
         '
@@ -82,7 +82,7 @@ Partial Class tabMain
         Me.tbFormVendas.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.tbFormVendas.Location = New System.Drawing.Point(4, 27)
         Me.tbFormVendas.Name = "tbFormVendas"
-        Me.tbFormVendas.Size = New System.Drawing.Size(912, 91)
+        Me.tbFormVendas.Size = New System.Drawing.Size(698, 56)
         Me.tbFormVendas.TabIndex = 2
         Me.tbFormVendas.Text = "Formulário de Vendas"
         '
@@ -93,7 +93,7 @@ Partial Class tabMain
         Me.tbFecharCx.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.tbFecharCx.Location = New System.Drawing.Point(4, 27)
         Me.tbFecharCx.Name = "tbFecharCx"
-        Me.tbFecharCx.Size = New System.Drawing.Size(912, 91)
+        Me.tbFecharCx.Size = New System.Drawing.Size(698, 56)
         Me.tbFecharCx.TabIndex = 3
         Me.tbFecharCx.Text = "Fechamento do caixa"
         '
@@ -104,7 +104,7 @@ Partial Class tabMain
         Me.tbQuitarCx.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.tbQuitarCx.Location = New System.Drawing.Point(4, 27)
         Me.tbQuitarCx.Name = "tbQuitarCx"
-        Me.tbQuitarCx.Size = New System.Drawing.Size(912, 91)
+        Me.tbQuitarCx.Size = New System.Drawing.Size(698, 56)
         Me.tbQuitarCx.TabIndex = 4
         Me.tbQuitarCx.Text = "Quitar débitos"
         '
@@ -115,16 +115,16 @@ Partial Class tabMain
         Me.tbConsultas.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.tbConsultas.Location = New System.Drawing.Point(4, 27)
         Me.tbConsultas.Name = "tbConsultas"
-        Me.tbConsultas.Size = New System.Drawing.Size(912, 91)
+        Me.tbConsultas.Size = New System.Drawing.Size(698, 56)
         Me.tbConsultas.TabIndex = 5
         Me.tbConsultas.Text = "Consultas"
         '
-        'tabPrincipal
+        'tabMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.tbcIndex)
-        Me.Name = "tabPrincipal"
+        Me.Name = "tabMain"
         Me.Size = New System.Drawing.Size(706, 87)
         Me.tbcIndex.ResumeLayout(False)
         Me.ResumeLayout(False)

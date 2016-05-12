@@ -7,7 +7,7 @@ Module loadHeader
     Dim str As String
 
     Public Sub loadHeaderMain(ByVal index As Integer)
-        main.Panel2.Controls.Add(head)
+        main.pnTop.Controls.Add(head)
         head.Dock = DockStyle.Top
         head.pictLogin.Image = head.imgListHeaderLog.Images(index)
         statusLampLoginLogout()
@@ -15,14 +15,14 @@ Module loadHeader
     End Sub
 
     Public Sub loadTabMain()
-        main.Panel2.Controls.Add(tab)
+        main.pnTop.Controls.Add(tab)
         tab.Dock = DockStyle.Top
         tab.Show()
     End Sub
 
     Public Sub loadingpanel2(ByVal value As String)
         str = value.Trim.ToString
-        main.Panel2.Controls.Clear()
+        main.pnTop.Controls.Clear()
         Select Case str
             Case "admin"
                 loadTabMain()

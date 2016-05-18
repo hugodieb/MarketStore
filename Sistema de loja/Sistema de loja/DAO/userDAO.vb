@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports Sistema_de_loja
 Imports Sistema_de_loja.User
 Imports Sistema_de_loja.main
 Imports System.Configuration
@@ -8,9 +9,8 @@ Public Class userDAO
     Dim sql As String = Nothing
     Dim cmd As SqlCommand = Nothing
     Dim dr As SqlDataReader = Nothing
-
     Public Sub login(ByVal user As User)
-       
+
         Using con As New SqlConnection
 
             Try
@@ -28,6 +28,8 @@ Public Class userDAO
                     dr.Read()
                     Dim strPerfil As String
                     strPerfil = dr.Item("typeUser")
+                    nameUser = dr.Item("name")
+                    main.lblNameUser.Text = nameUser.Trim.ToString
                     status = True
 
                     loadingpanel2(strPerfil)
@@ -47,11 +49,13 @@ Public Class userDAO
     End Sub
 
     Public Sub logout()
-        Dim tbm As New tabMain
         Dim name As String
         name = tbm.Name
-        main.pnTop.Controls.RemoveByKey(name)
+        tbm.flwBtnCad.Controls.Clear()
+        main.pntabmain.Controls.Clear()
         status = False
+        nameUser = Nothing
+        main.lblNameUser.Text = nameUser
         loadHeaderMain(0)
         statusLampLoginLogout()
     End Sub

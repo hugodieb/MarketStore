@@ -90,6 +90,12 @@
     <Compile Include="DAO\mdAcessoBD.vb" />
     <Compile Include="DAO\userDAO.vb" />
     <Compile Include="model\User.vb" />
+    <Compile Include="view\control\custonButton.Designer.vb">
+      <DependentUpon>custonButton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="view\control\custonButton.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="view\form\frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
@@ -133,6 +139,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="view\control\custonButton.resx">
+      <DependentUpon>custonButton.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\form\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +213,8 @@
   <ItemGroup>
     <None Include="icons\lamp11.png" />
     <None Include="icons\lamp22.png" />
+    <None Include="icons\adduser.png" />
+    <None Include="icons\adduserr.png" />
     <Content Include="myStore.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

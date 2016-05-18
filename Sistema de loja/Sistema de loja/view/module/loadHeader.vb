@@ -2,8 +2,6 @@
 Imports Sistema_de_loja.main
 
 Module loadHeader
-    Dim head As New header
-    Dim tab As New tabMain
     Dim str As String
 
     Public Sub loadHeaderMain(ByVal index As Integer)
@@ -14,25 +12,25 @@ Module loadHeader
         head.Show()
     End Sub
 
-    Public Sub loadTabMain()
-        main.pnTop.Controls.Add(tab)
-        tab.Dock = DockStyle.Top
-        tab.Show()
+    Public Sub loadTabMain(ByVal index As Integer)
+        head.pictLogin.Image = head.imgListHeaderLog.Images(index)
+        main.pntabmain.Controls.Add(tbm)
+        tbm.tbcIndex.SelectedTab = tbm.tbCadastro
+        tbm.Dock = DockStyle.Fill
+        tbm.tbCadastro.Show()
+        loadButtonstbMain()
     End Sub
 
     Public Sub loadingpanel2(ByVal value As String)
         str = value.Trim.ToString
-        main.pnTop.Controls.Clear()
+
         Select Case str
             Case "admin"
-                loadTabMain()
-                loadHeaderMain(1)
+                loadTabMain(1)
             Case "oper"
                 loadHeaderMain(1)
         End Select
-
         statusLampLoginLogout()
-
     End Sub
 
     Public Sub statusLampLoginLogout()
@@ -42,6 +40,26 @@ Module loadHeader
             head.picLamp.Image = head.imgListLamp.Images(0)
         Else
             head.picLamp.Image = head.imgListLamp.Images(1)
+        End If
+    End Sub
+
+    Private Sub loadButtonstbMain()
+        Dim arrayNameButton() As String = {"Clientes", "Produtos", "Fornecedores", "Usuários"}
+        Dim arrayIndexImgButton() As Integer = {0, 1, 2, 3}
+
+        If tbm.tbCadastro.Created Then
+
+            For i As Integer = 0 To arrayNameButton.Length - 1
+                Dim btnCuston As New custonButton
+                btnCuston.Width = 80
+                btnCuston.Height = 71
+                btnCuston.picbtncuston.Image = btnCuston.imgButtonCuston.Images(arrayIndexImgButton(i))
+                btnCuston.lblButtonCuston.Text = arrayNameButton(i)
+                btnCuston.Name = "custon" + arrayNameButton(i)
+                btnCuston.Show()
+                tbm.flwBtnCad.TabIndex = (i)
+                tbm.flwBtnCad.Controls.Add(btnCuston)
+            Next
         End If
     End Sub
 End Module

@@ -92,6 +92,7 @@ Partial Class custonButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.pnButtonCuston)
+        Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.Name = "custonButton"
         Me.Size = New System.Drawing.Size(106, 71)
         Me.pnButtonCuston.ResumeLayout(False)

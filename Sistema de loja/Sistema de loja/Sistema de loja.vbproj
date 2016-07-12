@@ -96,6 +96,24 @@
     <Compile Include="view\control\custonButton.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="view\control\pnCadClient.Designer.vb">
+      <DependentUpon>pnCadClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="view\control\pnCadClient.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\control\pnFill.Designer.vb">
+      <DependentUpon>pnFill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="view\control\pnFill.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\control\toolStripControl.Designer.vb">
+      <DependentUpon>toolStripControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="view\control\toolStripControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="view\form\frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
@@ -108,6 +126,7 @@
     <Compile Include="view\control\header.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="view\module\loadFormViews.vb" />
     <Compile Include="view\module\loadHeader.vb" />
     <Compile Include="view\form\main.vb">
       <SubType>Form</SubType>
@@ -141,6 +160,15 @@
   <ItemGroup>
     <EmbeddedResource Include="view\control\custonButton.resx">
       <DependentUpon>custonButton.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\control\pnCadClient.resx">
+      <DependentUpon>pnCadClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\control\pnFill.resx">
+      <DependentUpon>pnFill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\control\toolStripControl.resx">
+      <DependentUpon>toolStripControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\form\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
@@ -215,6 +243,11 @@
     <None Include="icons\lamp22.png" />
     <None Include="icons\adduser.png" />
     <None Include="icons\adduserr.png" />
+    <None Include="icons\cancel.png" />
+    <None Include="icons\save.png" />
+    <None Include="icons\edit.png" />
+    <None Include="icons\edit2.png" />
+    <None Include="icons\cancelar.png" />
     <Content Include="myStore.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

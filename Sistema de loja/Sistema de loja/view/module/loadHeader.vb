@@ -6,19 +6,19 @@ Module loadHeader
 
     Public Sub loadHeaderMain(ByVal index As Integer)
         main.pnTop.Controls.Add(head)
-        head.Dock = DockStyle.Top
+        'head.Dock = DockStyle.Top
         head.pictLogin.Image = head.imgListHeaderLog.Images(index)
         statusLampLoginLogout()
-        head.Show()
     End Sub
 
     Public Sub loadTabMain(ByVal index As Integer)
         head.pictLogin.Image = head.imgListHeaderLog.Images(index)
-        main.pntabmain.Controls.Add(tbm)
-        tbm.tbcIndex.SelectedTab = tbm.tbCadastro
-        tbm.Dock = DockStyle.Fill
-        tbm.tbCadastro.Show()
-        loadButtonstbMain()
+
+        'main.pnFill.Controls.Add(tbm)
+        ' main.pntabmain.Controls.Add(tbm)
+        ' tbm.tbcIndex.SelectedTab = tbm.tbCadastro
+        'tbm.Dock = DockStyle.Fill
+        'loadButtonstbMain()
     End Sub
 
     Public Sub loadingpanel2(ByVal value As String)
@@ -56,7 +56,6 @@ Module loadHeader
                 btnCuston.picbtncuston.Image = btnCuston.imgButtonCuston.Images(arrayIndexImgButton(i))
                 btnCuston.lblButtonCuston.Text = arrayNameButton(i)
                 btnCuston.Name = "custon" + arrayNameButton(i)
-                btnCuston.Show()
                 tbm.flwBtnCad.TabIndex = (i)
                 tbm.flwBtnCad.Controls.Add(btnCuston)
             Next

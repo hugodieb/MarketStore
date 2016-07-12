@@ -32,6 +32,7 @@ Public Class userDAO
                     main.lblNameUser.Text = nameUser.Trim.ToString
                     status = True
 
+
                     loadingpanel2(strPerfil)
                     frmLogin.Dispose()
 
@@ -51,8 +52,7 @@ Public Class userDAO
     Public Sub logout()
         Dim name As String
         name = tbm.Name
-        tbm.flwBtnCad.Controls.Clear()
-        main.pntabmain.Controls.Clear()
+
         status = False
         nameUser = Nothing
         main.lblNameUser.Text = nameUser

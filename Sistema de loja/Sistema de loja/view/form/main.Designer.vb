@@ -26,6 +26,7 @@ Partial Class main
         Me.pnBotton = New System.Windows.Forms.Panel()
         Me.lblNameUser = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.calendarHora = New System.Windows.Forms.Label()
         Me.calendarData = New System.Windows.Forms.Label()
         Me.linktwitter = New System.Windows.Forms.PictureBox()
         Me.linkinstagram = New System.Windows.Forms.PictureBox()
@@ -34,18 +35,12 @@ Partial Class main
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pnTop = New System.Windows.Forms.Panel()
-        Me.pnFill = New System.Windows.Forms.Panel()
-        Me.pntabmain = New System.Windows.Forms.Panel()
         Me.hr = New System.Windows.Forms.Timer(Me.components)
-        Me.calendarHora = New System.Windows.Forms.Label()
-        Me.TabPrincipal2 = New Sistema_de_loja.tabMain()
-        Me.TabPrincipal1 = New Sistema_de_loja.tabMain()
         Me.pnBotton.SuspendLayout()
         CType(Me.linktwitter, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.linkinstagram, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.linkface, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnFill.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnBotton
@@ -89,6 +84,17 @@ Partial Class main
         Me.Label3.Size = New System.Drawing.Size(52, 13)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Usuário : "
+        '
+        'calendarHora
+        '
+        Me.calendarHora.AutoSize = True
+        Me.calendarHora.Dock = System.Windows.Forms.DockStyle.Right
+        Me.calendarHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.calendarHora.Location = New System.Drawing.Point(920, 0)
+        Me.calendarHora.Name = "calendarHora"
+        Me.calendarHora.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
+        Me.calendarHora.Size = New System.Drawing.Size(0, 18)
+        Me.calendarHora.TabIndex = 2
         '
         'calendarData
         '
@@ -188,74 +194,19 @@ Partial Class main
         Me.pnTop.Size = New System.Drawing.Size(920, 0)
         Me.pnTop.TabIndex = 2
         '
-        'pnFill
-        '
-        Me.pnFill.BackColor = System.Drawing.Color.Transparent
-        Me.pnFill.BackgroundImage = Global.Sistema_de_loja.My.Resources.Resources.wallpaper_comprao_bonanza_1
-        Me.pnFill.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pnFill.Controls.Add(Me.pntabmain)
-        Me.pnFill.Controls.Add(Me.TabPrincipal2)
-        Me.pnFill.Controls.Add(Me.TabPrincipal1)
-        Me.pnFill.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnFill.Location = New System.Drawing.Point(0, 0)
-        Me.pnFill.Name = "pnFill"
-        Me.pnFill.Size = New System.Drawing.Size(920, 488)
-        Me.pnFill.TabIndex = 3
-        '
-        'pntabmain
-        '
-        Me.pntabmain.BackColor = System.Drawing.Color.Transparent
-        Me.pntabmain.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pntabmain.Location = New System.Drawing.Point(0, 0)
-        Me.pntabmain.Name = "pntabmain"
-        Me.pntabmain.Size = New System.Drawing.Size(916, 130)
-        Me.pntabmain.TabIndex = 3
-        '
         'hr
         '
         Me.hr.Enabled = True
-        '
-        'calendarHora
-        '
-        Me.calendarHora.AutoSize = True
-        Me.calendarHora.Dock = System.Windows.Forms.DockStyle.Right
-        Me.calendarHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.calendarHora.Location = New System.Drawing.Point(920, 0)
-        Me.calendarHora.Name = "calendarHora"
-        Me.calendarHora.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.calendarHora.Size = New System.Drawing.Size(0, 18)
-        Me.calendarHora.TabIndex = 2
-        '
-        'TabPrincipal2
-        '
-        Me.TabPrincipal2.AutoScroll = True
-        Me.TabPrincipal2.AutoSize = True
-        Me.TabPrincipal2.BackColor = System.Drawing.Color.MidnightBlue
-        Me.TabPrincipal2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TabPrincipal2.Location = New System.Drawing.Point(0, 0)
-        Me.TabPrincipal2.Name = "TabPrincipal2"
-        Me.TabPrincipal2.Size = New System.Drawing.Size(916, 0)
-        Me.TabPrincipal2.TabIndex = 1
-        '
-        'TabPrincipal1
-        '
-        Me.TabPrincipal1.AutoScroll = True
-        Me.TabPrincipal1.AutoSize = True
-        Me.TabPrincipal1.BackColor = System.Drawing.Color.MidnightBlue
-        Me.TabPrincipal1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TabPrincipal1.Location = New System.Drawing.Point(0, 0)
-        Me.TabPrincipal1.Name = "TabPrincipal1"
-        Me.TabPrincipal1.Size = New System.Drawing.Size(916, 0)
-        Me.TabPrincipal1.TabIndex = 0
         '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
+        Me.BackColor = System.Drawing.Color.Gainsboro
+        Me.BackgroundImage = Global.Sistema_de_loja.My.Resources.Resources.wallpaper_comprao_bonanza_1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(920, 519)
-        Me.Controls.Add(Me.pnFill)
         Me.Controls.Add(Me.pnTop)
         Me.Controls.Add(Me.pnBotton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -270,8 +221,6 @@ Partial Class main
         CType(Me.linkinstagram, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.linkface, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnFill.ResumeLayout(False)
-        Me.pnFill.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -283,11 +232,7 @@ Partial Class main
     Friend WithEvents linkinstagram As System.Windows.Forms.PictureBox
     Friend WithEvents linkface As System.Windows.Forms.PictureBox
     Friend WithEvents linktwitter As System.Windows.Forms.PictureBox
-    Friend WithEvents TabPrincipal1 As Sistema_de_loja.tabMain
-    Friend WithEvents TabPrincipal2 As Sistema_de_loja.tabMain
     Friend WithEvents pnTop As System.Windows.Forms.Panel
-    Friend WithEvents pnFill As System.Windows.Forms.Panel
-    Friend WithEvents pntabmain As System.Windows.Forms.Panel
     Friend WithEvents hr As System.Windows.Forms.Timer
     Friend WithEvents calendarData As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label

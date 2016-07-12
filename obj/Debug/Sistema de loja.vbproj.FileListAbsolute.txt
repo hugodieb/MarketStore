@@ -1,0 +1,20 @@
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\bin\Debug\Sistema de loja.exe.config
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\bin\Debug\Sistema de loja.exe
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\bin\Debug\Sistema de loja.pdb
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\bin\Debug\Sistema de loja.xml
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\obj\Debug\Sistema_de_loja.Resources.resources
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\obj\Debug\Sistema de loja.vbproj.GenerateResource.Cache
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\obj\Debug\Sistema de loja.exe
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\obj\Debug\Sistema de loja.xml
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\obj\Debug\Sistema de loja.pdb
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\obj\Debug\Sistema_de_loja.main.resources
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\obj\Debug\Sistema_de_loja.header.resources
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\obj\Debug\Sistema_de_loja.frmLogin.resources
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\bin\Debug\myStore.mdf
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\bin\Debug\myStore_log.ldf
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\obj\Debug\Sistema_de_loja.tabMain.resources
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\obj\Debug\Sistema de loja.vbprojResolveAssemblyReference.cache
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\obj\Debug\Sistema_de_loja.custonButton.resources
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\obj\Debug\Sistema_de_loja.pnCadClient.resources
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\obj\Debug\Sistema_de_loja.toolStripControl.resources
+G:\projetos_vb\myStore\Sistema de loja\Sistema de loja\obj\Debug\Sistema_de_loja.pnFill.resources

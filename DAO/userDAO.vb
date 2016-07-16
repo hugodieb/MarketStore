@@ -56,7 +56,7 @@ Public Class userDAO
 
         If (main.Controls.Contains(tbm)) Then
             main.Controls.Remove(mdAcessoBD.tbm)
-            mdAcessoBD.tbm.Dispose()
+            'mdAcessoBD.tbm.Dispose()
         End If
 
         status = False

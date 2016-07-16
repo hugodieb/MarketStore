@@ -3,7 +3,7 @@ Imports Sistema_de_loja.main
 
 Module loadHeader
     Dim str As String
-    Dim pn As New pnFill
+    
 
     Public Sub loadHeaderMain(ByVal index As Integer)
         main.pnTop.Controls.Add(head)
@@ -12,13 +12,11 @@ Module loadHeader
     End Sub
 
     Public Sub loadTabMain(ByVal index As Integer)
-        head.pictLogin.Image = head.imgListHeaderLog.Images(index)
-        main.Controls.Add(mdAcessoBD.pnfill)
 
-        ' main.pntabmain.Controls.Add(tbm)
-        ' tbm.tbcIndex.SelectedTab = tbm.tbCadastro
-        'tbm.Dock = DockStyle.Fill
-        'loadButtonstbMain()
+        head.pictLogin.Image = head.imgListHeaderLog.Images(index)
+        main.Controls.Add(mdAcessoBD.tbm)
+
+        loadButtonstbMain()
     End Sub
 
     Public Sub loadingpanel2(ByVal value As String)
@@ -47,7 +45,7 @@ Module loadHeader
         Dim arrayNameButton() As String = {"Clientes", "Produtos", "Fornecedores", "Usuários"}
         Dim arrayIndexImgButton() As Integer = {0, 1, 2, 3}
 
-        If tbm.tbCadastro.Created Then
+        If Not tbm.flwBtnCad.TabIndex <> 0 Then
 
             For i As Integer = 0 To arrayNameButton.Length - 1
                 Dim btnCuston As New custonButton
@@ -59,6 +57,10 @@ Module loadHeader
                 tbm.flwBtnCad.TabIndex = (i)
                 tbm.flwBtnCad.Controls.Add(btnCuston)
             Next
+
+        Else
+            Exit Sub
         End If
     End Sub
+
 End Module

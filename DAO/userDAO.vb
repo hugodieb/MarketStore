@@ -53,7 +53,12 @@ Public Class userDAO
     Public Sub logout()
         Dim name As String
         name = tbm.Name
-        main.Controls.Remove(mdAcessoBD.pnfill)
+
+        If (main.Controls.Contains(tbm)) Then
+            main.Controls.Remove(mdAcessoBD.tbm)
+            mdAcessoBD.tbm.Dispose()
+        End If
+
         status = False
         nameUser = Nothing
         main.lblNameUser.Text = nameUser

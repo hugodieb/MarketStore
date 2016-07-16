@@ -49,7 +49,7 @@ Partial Class tabMain
         Me.tbcIndex.Location = New System.Drawing.Point(0, 0)
         Me.tbcIndex.Name = "tbcIndex"
         Me.tbcIndex.SelectedIndex = 0
-        Me.tbcIndex.Size = New System.Drawing.Size(706, 138)
+        Me.tbcIndex.Size = New System.Drawing.Size(706, 120)
         Me.tbcIndex.TabIndex = 0
         '
         'tbCadastro
@@ -62,7 +62,7 @@ Partial Class tabMain
         Me.tbCadastro.Location = New System.Drawing.Point(4, 27)
         Me.tbCadastro.Name = "tbCadastro"
         Me.tbCadastro.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbCadastro.Size = New System.Drawing.Size(698, 107)
+        Me.tbCadastro.Size = New System.Drawing.Size(698, 89)
         Me.tbCadastro.TabIndex = 0
         Me.tbCadastro.Text = "Cadastro"
         '
@@ -73,7 +73,7 @@ Partial Class tabMain
         Me.flwBtnCad.Location = New System.Drawing.Point(3, 3)
         Me.flwBtnCad.Name = "flwBtnCad"
         Me.flwBtnCad.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.flwBtnCad.Size = New System.Drawing.Size(688, 97)
+        Me.flwBtnCad.Size = New System.Drawing.Size(688, 79)
         Me.flwBtnCad.TabIndex = 0
         '
         'tbAlterar
@@ -138,8 +138,9 @@ Partial Class tabMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MidnightBlue
         Me.Controls.Add(Me.tbcIndex)
+        Me.Location = New System.Drawing.Point(0, 100)
         Me.Name = "tabMain"
-        Me.Size = New System.Drawing.Size(706, 138)
+        Me.Size = New System.Drawing.Size(706, 120)
         Me.tbcIndex.ResumeLayout(False)
         Me.tbCadastro.ResumeLayout(False)
         Me.ResumeLayout(False)

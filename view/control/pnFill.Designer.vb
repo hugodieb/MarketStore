@@ -22,28 +22,21 @@ Partial Class pnFill
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(777, 188)
-        Me.Panel1.TabIndex = 0
         '
         'pnFill
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.Panel1)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Name = "pnFill"
-        Me.Size = New System.Drawing.Size(777, 188)
+        Me.Size = New System.Drawing.Size(main.Width, 188)
         Me.ResumeLayout(False)
+        Me.Visible = True
 
     End Sub
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 
+    Private Sub pnFill_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Controls.Add(tbm)
+    End Sub
 End Class

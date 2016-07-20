@@ -6,9 +6,9 @@ Module loadFormViews
     'Dim w As Integer
     'Dim h As Integer
     Public Sub loadpnView()
-        main.pnFill.Controls.Add(tsControl)
+        '  main.pnFill.Controls.Add(tsControl)
         tsControl.Location = New Point(0, 130)
-        main.pnFill.Controls.Add(pnCC)
+        '  main.pnFill.Controls.Add(pnCC)
         'pnCC.Dock = DockStyle.Fill
         'calculateLocationgpView()
         'pnCC.flwControlCadClient.Location = New Point(w, h)

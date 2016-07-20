@@ -1,4 +1,6 @@
-﻿Public Class pnCadClient
+﻿Imports Sistema_de_loja.mdAcessoBD
+
+Public Class pnCadClient
 
     Dim w As Integer
     Dim h As Integer
@@ -27,13 +29,13 @@
         Dim k As Integer
         Dim z As Integer
 
-        x = Me.Size.Width
-        y = (Me.Size.Height) - (main.pntabmain.Size.Height)
-        k = Me.flwControlCadClient.Size.Width
-        z = Me.flwControlCadClient.Size.Height
+        '  x =
+        '  y = (Me.Size.Height) - (main.pntabmain.Size.Height)
+        '  k = Me.flwControlCadClient.Size.Width
+        '  z = Me.flwControlCadClient.Size.Height
 
         w = (x - k) / 2
-        h = (y - z) / 2 + main.pntabmain.Size.Height
+        ' h = (y - z) / 2 + main.pntabmain.Size.Height
     End Sub
 
 End Class

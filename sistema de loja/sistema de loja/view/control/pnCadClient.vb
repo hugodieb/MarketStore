@@ -2,8 +2,8 @@
 
 Public Class pnCadClient
 
-    Dim w As Integer
-    Dim h As Integer
+    Dim k As Integer
+    Dim z As Integer
 
     Private Sub pnCadClient_VisibleChanged(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged
         txtNameCadClient.Text = ""
@@ -17,25 +17,31 @@ Public Class pnCadClient
     End Sub
 
     Private Sub pnCadClient_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Dock = DockStyle.Fill
         calculateLocationgpView()
-        Me.flwControlCadClient.Location = New Point(w, h)
+        Me.Location = New Point(k, z)
     End Sub
 
 
     Private Sub calculateLocationgpView()
-        Dim x As Integer
-        Dim y As Integer
-        Dim k As Integer
-        Dim z As Integer
+        Dim a As Integer
+        Dim b As Integer
 
-        '  x =
-        '  y = (Me.Size.Height) - (main.pntabmain.Size.Height)
-        '  k = Me.flwControlCadClient.Size.Width
-        '  z = Me.flwControlCadClient.Size.Height
+        Dim c As Integer
+        Dim d As Integer
+        Dim e As Integer
+        Dim f As Integer
 
-        w = (x - k) / 2
-        ' h = (y - z) / 2 + main.pntabmain.Size.Height
+        c = main.Height
+        d = main.pnTop.Height
+        e = main.pnBotton.Height
+        f = tbm.Height
+
+
+        k = (main.Width - Me.flwControlCadClient.Width) / 2 'largura painel principal
+        a = c - (d + e + f) ' altura do pn que sobra no main
+        b = a / 2
+        z = b   ' altura onde fica o pncadclient
+
     End Sub
 
 End Class

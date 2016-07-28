@@ -13,14 +13,14 @@ Public Class custonButton
                     tsControl.Show()
 
                 Else
-                    loadpnView()
+                    loadpnView(pnCC)
                 End If
             Case "custonFornecedores"
                 If control <> True Then
                     tsControl.Show()
 
                 Else
-                    loadpnView()
+                    'loadpnView()
                 End If
 
             Case "custonProdutos"
@@ -28,10 +28,11 @@ Public Class custonButton
                     tsControl.Show()
 
                 Else
-                    loadpnView()
+                    ' loadpnView()
                 End If
         End Select
 
+<<<<<<< HEAD
 
 
 
@@ -39,7 +40,13 @@ Public Class custonButton
 
 
 
-        
+
+=======
+
+>>>>>>> master
     End Sub
 
+    Private Sub custonButton_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

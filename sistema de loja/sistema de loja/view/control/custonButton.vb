@@ -20,7 +20,7 @@ Public Class custonButton
                     tsControl.Show()
 
                 Else
-                    'loadpnView()
+                    loadpnView(pnCC)
                 End If
 
             Case "custonProdutos"

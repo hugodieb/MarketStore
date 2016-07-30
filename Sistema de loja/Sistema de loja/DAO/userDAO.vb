@@ -42,7 +42,7 @@ Public Class userDAO
 
             Catch ex As Exception
                 MsgBox(ex.Message)
-                ' MsgBox("Não houve uma conexão com o banco de dados, se persistir o erro, favor entrar em contato com o administrador do sistema.", MsgBoxStyle.Information)
+                MsgBox("Não houve uma conexão com o banco de dados, se persistir o erro, favor entrar em contato com o administrador do sistema.", MsgBoxStyle.Information)
             Finally
                 con.Close()
             End Try

@@ -32,18 +32,6 @@ Public Class custonButton
                 End If
         End Select
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-=======
-
->>>>>>> master
     End Sub
 
     Private Sub custonButton_Load(sender As Object, e As EventArgs) Handles MyBase.Load

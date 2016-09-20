@@ -3,7 +3,6 @@ Imports Sistema_de_loja.main
 
 Module loadHeader
     Dim str As String
-    
 
     Public Sub loadHeaderMain(ByVal index As Integer)
         main.pnTop.Controls.Add(head)

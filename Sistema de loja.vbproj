@@ -86,9 +86,14 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="control\clientsControl.vb" />
     <Compile Include="control\loginCntrol.vb" />
+    <Compile Include="DAO\bdSQL.vb" />
+    <Compile Include="DAO\clientDAO.vb" />
     <Compile Include="DAO\mdAcessoBD.vb" />
     <Compile Include="DAO\userDAO.vb" />
+    <Compile Include="DAO\validation\ValidControlText.vb" />
+    <Compile Include="model\client.vb" />
     <Compile Include="model\User.vb" />
     <Compile Include="view\control\custonButton.Designer.vb">
       <DependentUpon>custonButton.vb</DependentUpon>

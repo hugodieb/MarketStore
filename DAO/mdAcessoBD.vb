@@ -1,5 +1,6 @@
 ﻿Imports Sistema_de_loja 
 Module mdAcessoBD
+    Public strPerfil As String
     Public status As Boolean
     Public head As New header
     Public tbm As New tabMain

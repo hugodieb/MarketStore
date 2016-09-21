@@ -49,77 +49,105 @@ Public Class pnCadClient
         txtCellPhoneCadClient.Text = ""
     End Sub
 
-    Private Sub txtNameCadClient_Leave(sender As Object, e As EventArgs) Handles txtNameCadClient.Leave
-        'If Not A Matching Format Entered
-        If Not Regex.Match(txtNameCadClient.Text, "^[a-zA-Z\s]*$", RegexOptions.IgnoreCase).Success Then 'Only Letters
-
-            MessageBox.Show("Entre somente com letras do alfabeto!") 'Inform User
-
-            txtNameCadClient.Focus() 'Return Focus
-            txtNameCadClient.Clear() 'Clear TextBox
-
-        End If
-    End Sub
-
-    ' Private Sub txtCPFCadClient_Leave(sender As Object, e As EventArgs) Handles txtCPFCadClient.Leave
-    'If Not A Matching Format Entered
-    '    If Not Regex.Match(txtCPFCadClient.Text, "^(\d{11})*$", RegexOptions.IgnoreCase).Success Then 'Only numbers
-
-    '      MessageBox.Show("Entre com numero de cpf valido!") 'Inform User
-
-    '     txtCPFCadClient.Focus() 'Return Focus
-    '     txtCPFCadClient.Clear() 'Clear TextBox
-
-    '  End If
-    '  End Sub
-
-    Private Sub txtNameCadClient_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtNameCadClient.Validating
-        If txtNameCadClient.Text.Trim.Length = 0 Then
-            cderrorname.SetError(txtNameCadClient, "Informe o nome.")
-        End If
-
-    End Sub
-
-    'Private Sub txtCPFCadClient_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtCPFCadClient.Validating
-
-    'If Not A Matching Format Entered
-    '  If Not Regex.Match(txtCPFCadClient.Text, "^(\d{11})*$", RegexOptions.IgnoreCase).Success Then 'Only numbers
-
-    'MessageBox.Show("Entre com numero de cpf valido!") 'Inform User
-
-    '  txtCPFCadClient.Focus() 'Return Focus
-    '  txtCPFCadClient.Clear() 'Clear TextBox
-    '  txtCPFCadClient.BackColor = Color.Yellow
-
-    '   End If
-
-    '  If txtCPFCadClient.Text.Trim.Length = 0 Then
-    'cderrorcpf.SetError(txtCPFCadClient, "Informe cpf valido")
-    ' End If
-    '  End Sub
-
     Private Sub txtNameCadClient_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNameCadClient.KeyPress
-        If txtNameCadClient.Text.Trim.Length > 0 Then
+        If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = vbBack Then
+            cderrorname.SetError(txtNameCadClient, "Somente letras sem numeros.")
+            e.Handled = True
+        Else
             cderrorname.Clear()
-
         End If
     End Sub
 
     Private Sub txtCPFCadClient_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCPFCadClient.KeyPress
-        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = vbBack Then
+        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = vbBack And Not e.KeyChar = "-" Then
             cderrorcpf.SetError(txtCPFCadClient, "Somente numeros.")
+            e.Handled = True
+        Else
+            cderrorcpf.Clear()
         End If
-
     End Sub
 
-    Private Sub txtRgCadClient_Leave(sender As Object, e As EventArgs) Handles txtRgCadClient.Leave
-        'If Not A Matching Format Entered
-        If Not Regex.Match(txtRgCadClient.Text, "^(\d{6})*$", RegexOptions.IgnoreCase).Success Then 'Only numbers
+    Private Sub txtRgCadClient_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRgCadClient.KeyPress
+        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = vbBack And Not e.KeyChar = "-" Then
+            cderrorrg.SetError(txtRgCadClient, "Somente numeros.")
+            e.Handled = True
+        Else
+            cderrorrg.Clear()
+        End If
+    End Sub
+   
+    Private Sub txtDistrictCadClient_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDistrictCadClient.KeyPress
+        If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = vbBack Then
+            cderrorstreet.SetError(txtDistrictCadClient, "Somente letras sem numeros.")
+            e.Handled = True
+        Else
+            cderrorstreet.Clear()
+        End If
+    End Sub
 
-            MessageBox.Show("Entre com numero de rg valido!") 'Inform User
+    Private Sub txtPhoneCadClient_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhoneCadClient.KeyPress
+        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = vbBack And Not e.KeyChar = "-" Then
+            cderrorphone.SetError(txtPhoneCadClient, "Somente numeros.")
+            e.Handled = True
+        Else
+            cderrorphone.Clear()
+        End If
+    End Sub
 
-            txtRgCadClient.Focus() 'Return Focus
-            txtRgCadClient.Clear() 'Clear TextBox
+    Private Sub txtCellPhoneCadClient_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCellPhoneCadClient.KeyPress
+        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = vbBack And Not e.KeyChar = "-" Then
+            cderrorcellphone.SetError(txtCellPhoneCadClient, "Somente numeros.")
+            e.Handled = True
+        Else
+            cderrorcellphone.Clear()
+        End If
+    End Sub
+
+    Private Sub txtCPFCadClient_Validated(sender As Object, e As EventArgs) Handles txtCPFCadClient.Validated
+        Dim strregex As String = "^\d{9}-\d{2}$"
+
+        Dim reg_exp As New Regex(strregex)
+
+        If Not reg_exp.IsMatch(txtCPFCadClient.Text) Then
+            txtCPFCadClient.BackColor = Color.Yellow
+        Else
+            txtCPFCadClient.BackColor = Color.White
+        End If
+    End Sub
+
+    Private Sub txtRgCadClient_Validated(sender As Object, e As EventArgs) Handles txtRgCadClient.Validated
+        Dim strregex As String = "^\d{8}-\d{1}$"
+
+        Dim reg_exp As New Regex(strregex)
+
+        If Not reg_exp.IsMatch(txtRgCadClient.Text) Then
+            txtRgCadClient.BackColor = Color.Yellow
+        Else
+            txtRgCadClient.BackColor = Color.White
+        End If
+    End Sub
+
+    Private Sub txtPhoneCadClient_Validated(sender As Object, e As EventArgs) Handles txtPhoneCadClient.Validated
+        Dim strregex As String = "^\d{4}-\d{4}$"
+
+        Dim reg_exp As New Regex(strregex)
+
+        If Not reg_exp.IsMatch(txtPhoneCadClient.Text) Then
+            txtPhoneCadClient.BackColor = Color.Yellow
+        Else
+            txtPhoneCadClient.BackColor = Color.White
+        End If
+    End Sub
+
+    Private Sub txtCellPhoneCadClient_Validated(sender As Object, e As EventArgs) Handles txtCellPhoneCadClient.Validated
+        Dim strregex As String = "^\d{4}-\d{4}$"
+
+        Dim reg_exp As New Regex(strregex)
+
+        If Not reg_exp.IsMatch(txtCellPhoneCadClient.Text) Then
+            txtCellPhoneCadClient.BackColor = Color.Yellow
+        Else
+            txtCellPhoneCadClient.BackColor = Color.White
         End If
     End Sub
 End Class

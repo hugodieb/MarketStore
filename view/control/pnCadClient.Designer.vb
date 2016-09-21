@@ -46,6 +46,8 @@ Partial Class pnCadClient
         Me.cderrorrg = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.cderroradrress = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.cderrorstreet = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.cderrorphone = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.cderrorcellphone = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.flwControlCadClient.SuspendLayout()
         Me.gpDP.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
@@ -61,6 +63,8 @@ Partial Class pnCadClient
         CType(Me.cderrorrg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cderroradrress, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cderrorstreet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cderrorphone, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cderrorcellphone, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'flwControlCadClient
@@ -185,7 +189,7 @@ Partial Class pnCadClient
         '
         Me.txtAddressCadClient.Location = New System.Drawing.Point(6, 20)
         Me.txtAddressCadClient.Name = "txtAddressCadClient"
-        Me.txtAddressCadClient.Size = New System.Drawing.Size(457, 21)
+        Me.txtAddressCadClient.Size = New System.Drawing.Size(437, 21)
         Me.txtAddressCadClient.TabIndex = 0
         '
         'GroupBox15
@@ -264,6 +268,14 @@ Partial Class pnCadClient
         '
         Me.cderrorstreet.ContainerControl = Me
         '
+        'cderrorphone
+        '
+        Me.cderrorphone.ContainerControl = Me
+        '
+        'cderrorcellphone
+        '
+        Me.cderrorcellphone.ContainerControl = Me
+        '
         'pnCadClient
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -297,6 +309,8 @@ Partial Class pnCadClient
         CType(Me.cderrorrg, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cderroradrress, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cderrorstreet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cderrorphone, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cderrorcellphone, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -323,5 +337,7 @@ Partial Class pnCadClient
     Friend WithEvents cderrorrg As System.Windows.Forms.ErrorProvider
     Friend WithEvents cderroradrress As System.Windows.Forms.ErrorProvider
     Friend WithEvents cderrorstreet As System.Windows.Forms.ErrorProvider
+    Friend WithEvents cderrorphone As System.Windows.Forms.ErrorProvider
+    Friend WithEvents cderrorcellphone As System.Windows.Forms.ErrorProvider
 
 End Class

@@ -19,7 +19,6 @@ Public Class toolStripControl
 
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
         If main.Controls.Contains(pnCC) Then
-
             saveClient()
             pnCC.cleanviewClient()
         End If
@@ -40,16 +39,5 @@ Public Class toolStripControl
         clientCtrl = New clientsControl
         clientCtrl.add(c)
     End Sub
-
-    Private Function validCad(ByVal cd As pnCadClient) As Boolean
-
-        Dim strphone As String = "^\d{4}-\d{4}$"
-        Dim strcell As String = "^\d{4}-\d{4}$"
-        Dim strcpf As String = "^\d{9}-\d{2}$"
-        Dim strrg As String = "^\d{8}-\d{1}$"
-
-
-        Return isValid
-    End Function
 
 End Class

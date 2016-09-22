@@ -1,5 +1,6 @@
 ﻿Imports Sistema_de_loja.mdAcessoBD
 Imports System.Text.RegularExpressions
+Imports System.Drawing.Color
 
 Public Class pnCadClient
 
@@ -39,14 +40,14 @@ Public Class pnCadClient
     End Sub
 
     Public Sub cleanviewClient()
-        txtNameCadClient.Text = ""
-        txtCPFCadClient.Text = ""
-        txtRgCadClient.Text = ""
-        txtAddressCadClient.Text = ""
-        txtComplementCadClient.Text = ""
-        txtDistrictCadClient.Text = ""
-        txtPhoneCadClient.Text = ""
-        txtCellPhoneCadClient.Text = ""
+        txtNameCadClient.ResetText()
+        txtCPFCadClient.ResetText()
+        txtRgCadClient.ResetText()
+        txtAddressCadClient.ResetText()
+        txtComplementCadClient.ResetText()
+        txtDistrictCadClient.ResetText()
+        txtPhoneCadClient.ResetText()
+        txtCellPhoneCadClient.ResetText()
     End Sub
 
     Private Sub txtNameCadClient_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNameCadClient.KeyPress
@@ -77,7 +78,7 @@ Public Class pnCadClient
     End Sub
    
     Private Sub txtDistrictCadClient_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDistrictCadClient.KeyPress
-        If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = vbBack Then
+        If Not Char.IsLetterOrDigit(e.KeyChar) And Not e.KeyChar = vbBack Then
             cderrorstreet.SetError(txtDistrictCadClient, "Somente letras sem numeros.")
             e.Handled = True
         Else
@@ -148,6 +149,14 @@ Public Class pnCadClient
             txtCellPhoneCadClient.BackColor = Color.Yellow
         Else
             txtCellPhoneCadClient.BackColor = Color.White
+        End If
+    End Sub
+
+    Private Sub txtNameCadClient_Validated(sender As Object, e As EventArgs) Handles txtNameCadClient.Validated
+        If Not txtNameCadClient.Text.Length >= 4 Then
+            txtNameCadClient.BackColor = Color.Yellow
+        Else
+            txtNameCadClient.BackColor = Color.White
         End If
     End Sub
 End Class

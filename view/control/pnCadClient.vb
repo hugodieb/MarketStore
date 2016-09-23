@@ -4,6 +4,10 @@ Imports System.Drawing.Color
 
 Public Class pnCadClient
 
+    Dim cpfValid As Boolean
+    Dim nameValid As Boolean
+    Dim rgValid As Boolean
+
     Dim k As Integer
     Dim z As Integer
 
@@ -111,8 +115,12 @@ Public Class pnCadClient
 
         If Not reg_exp.IsMatch(txtCPFCadClient.Text) Then
             txtCPFCadClient.BackColor = Color.Yellow
+            cpfValid = False
+            habilitButtonSave()
         Else
             txtCPFCadClient.BackColor = Color.White
+            cpfValid = True
+            habilitButtonSave()
         End If
     End Sub
 
@@ -123,8 +131,12 @@ Public Class pnCadClient
 
         If Not reg_exp.IsMatch(txtRgCadClient.Text) Then
             txtRgCadClient.BackColor = Color.Yellow
+            rgValid = False
+            habilitButtonSave()
         Else
             txtRgCadClient.BackColor = Color.White
+            rgValid = True
+            habilitButtonSave()
         End If
     End Sub
 
@@ -155,8 +167,20 @@ Public Class pnCadClient
     Private Sub txtNameCadClient_Validated(sender As Object, e As EventArgs) Handles txtNameCadClient.Validated
         If Not txtNameCadClient.Text.Length >= 4 Then
             txtNameCadClient.BackColor = Color.Yellow
+            nameValid = False
+            habilitButtonSave()
         Else
             txtNameCadClient.BackColor = Color.White
+            nameValid = True
+            habilitButtonSave()
+        End If
+    End Sub
+
+    Private Sub habilitButtonSave()
+        If cpfValid And rgValid And nameValid Then
+            tsControl.SaveToolStripButton.Enabled = True
+        Else
+            tsControl.SaveToolStripButton.Enabled = False
         End If
     End Sub
 End Class

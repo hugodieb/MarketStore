@@ -1,8 +1,7 @@
 ﻿Imports System.Text.RegularExpressions
-
+Imports Sistema_de_loja.pnCadClient
 Public Class toolStripControl
     Dim clientCtrl As clientsControl
-    Dim isValid As Boolean = Nothing
 
     Private Sub toolStripControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Location = New Point(0, 161)
